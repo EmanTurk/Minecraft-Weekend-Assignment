@@ -229,13 +229,40 @@ body {
       0 0 10px rgba(179, 255, 151, 0.7), 0 0 15px rgba(179, 255, 151, 0.7);
   }
 }
-.tile-window {
-    cursor: pointer;
-    width: 9rem;
-    height: 9rem;
-   
-    position: relative;
+
+
+  .tile-window {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    background-color: #605106;
+    box-sizing: border-box;
+    width: auto;
+    flex-wrap: nowrap;
+    border-radius: 20px;
+    border: #afae4f solid 1px;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    
   }
+  
+  .item {
+     border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    margin: 5px auto;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  .item:hover {
+    opacity: 2;
+  }
+  
+
   
  
 

@@ -87,6 +87,7 @@ createWorld();
 const axe = document.querySelector(".axe");
 const pickaxe = document.querySelector(".pickaxe");
 const shovel = document.querySelector(".shovel");
+
 let inUseTool;
 
 // Function to change the cursor
@@ -124,8 +125,49 @@ shovel.addEventListener("click", () => {
 //  axe - default tool
 axe.click();
 //========================================================================//
+//tile window- the count of the tiles in the box//
 
+const tileCounts = {
+    grass: 0,
+    dirt: 0,
+    stones:0,
+    diamond: 0,
+    gold:0,
+    leaves: 0,
+    flowerLeaves: 0,
+    wood: 0
+};
 
+//Function: update the tile display
+
+function updateCountDisplay (tileType){
+    const countElemtn = document.getElementById(`count${tileType.charAt(0).toUpperCase() + tileType.slice(1)}`);
+    countElemtn.textContent = tileCounts[tileType];
+}
+// Function to remove a tile (to be called when a tile is clicked)
+function removeTile(tileType) {
+    if (tileType in tileCounts) {
+        tileCounts[tileType]++;
+        updateCountDisplay(tileType);
+    }
+    // Additional logic to actually remove the tile from the game
+}
+
+// Function to toggle the tile window
+const box = document.querySelector('.box');
+const tileWindow = document.getElementById('tilewindow');
+
+box.addEventListener('click', () => {
+    tileWindow.style.display = tileWindow.style.display === 'none' ? 'block' : 'none';
+});
+
+///event listner and mapping tools and tiles
+
+const toolTileMappings = {
+    shovel: ["dirt", "grass"],
+    axe: ["wood", "leaves", "flower-leaves"],
+    pickaxe: ["stone", "diamond", "gold"]
+};
 
 
 
