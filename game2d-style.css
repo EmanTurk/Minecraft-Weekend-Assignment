@@ -25,12 +25,17 @@ body {
 }
 .main-world {
     width: 100%; 
+    height: 100%;    
+
+
 }
 
 .cell-contaniner{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    width: 80%;
+height: 100%;    
 }
 
 .tools-bar {
@@ -39,12 +44,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20%;
-    /* height: 100%;
-    position: relative;
-    padding-left: 2rem;
-    left: -41%;
-    z-index: 50; */
+    width: 15%;
 }
 
 .tool{
@@ -72,19 +72,25 @@ body {
 .row{
     width: 100%;
     display: flex;
+   
+
+
   
 }
 .cell{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+
 }
 .cell:hover{
     border: 1px #fff solid;
 }
 
 .sky {
-    background-color: rgb(109, 196, 231);
+    background-color: rgb(78, 179, 219);
 }
+
+
 
 .wood {
     background: url(./Assets/treebark.jpeg) no-repeat center center/cover;}
@@ -102,11 +108,107 @@ body {
 }
 
 .stone {
-    background: url(./Assets/stone.jpeg) no-repeat center center/cover;}
+    background: url(./Assets/stone03.jpeg) no-repeat center center/cover;}
 
 .grass {
     background: url(./Assets/grass-soil.jpeg) no-repeat center center/cover;}
 .dirt {
     background: url(./Assets/soil02.jpeg) no-repeat center center/cover;}
+.flower-leaves {
+    background: url(./Assets/leaves-flower.jpeg) no-repeat center center/cover;}
 
- 
+ .reset-btn{
+        display: flex;
+        color: #fff;
+        width: 150px;
+        justify-content: center;
+        height: 60px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+        font-family: Minecraft;
+        display: inline-block;
+        margin-top: 30px;
+        font-size: 18px;
+
+
+ }
+
+  .reset-btn:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  @keyframes glows {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .reset-btn:active {
+    color: #ffffff;
+  }
+  
+  .reset-btn:active:after {
+    background: transparent;
+  }
+  
+  .reset-btn:hover:before {
+    opacity: 1;
+  }
+  
+  .reset-btn:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  @keyframes glows {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
