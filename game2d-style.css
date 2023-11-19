@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-whole-container {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    padding: 1rem;
+    background-color: rgb(48, 47, 47);
+}
+
+.tools-bar {
+    background-color: rgb(66, 66, 66);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 140%;
+    position: relative;
+    padding-left: 2rem;
+    left: -41%;
+    z-index: 50;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+  
+}
+.cell{
+    width: 20px;
+    height: 20px;
+}
+.cell:hover{
+    border: 1px #fff solid;
+}
+
+.sky {
+    background-color: rgb(109, 196, 231);
+}
+
+.wood {
+    background: url(./Assets/treebark.jpeg) no-repeat center center/cover;}
+
+.gold {
+    background: url(./Assets/gold.jpeg) no-repeat center center/cover;
+}
+
+.diamond {
+    background: url(./Assets/diamond.jpeg) no-repeat center center/cover;
+}
+
+.leaves {
+    background: url(./Assets/treeleaf.jpeg) no-repeat center center/cover;
+}
+
+.stone {
+    background: url(./Assets/stone.jpeg) no-repeat center center/cover;}
+
+.grass {
+    background: url(./Assets/grass-soil.jpeg) no-repeat center center/cover;}
+.soil {
+    background: url(./Assets/soil02.jpeg) no-repeat center center/cover;}
+
+    .random-material {
+        background-color: rgb(196, 27, 27); 
+    }
+    
