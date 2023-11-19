@@ -1,23 +1,24 @@
-//========================================================================//    ---------*Build the 2d world- cell structure and placement*--------------- 
+//========================================================================//   
+// ---------*Build the 2d world- cell structure and placement*------------//
 //========================================================================//
 const numRows = 20;
 const numCols = 40;
 const gameWorld = document.getElementById("2d-world");
 
 function createWorld() {
-    for (let i = 0; i < numRows; i++) {
+    for (let i = 0; i < numRows; i++) { //i loops from 0 to -1.
       const row = addRow();
       gameWorld.append(row);
   
-      for (let j = 0; j < numCols; j++) {
+      for (let j = 0; j < numCols; j++) {//inner loop for the columns
         const cell = addCell();
-  
+
         // Bottom rows for diamonds and gold
         if (i === numRows - 1) {
           cell.classList.add("diamond");
         } else if (i === numRows - 2) {
           cell.classList.add("gold");
-        } else if (i >= numRows - 8) {
+        } else if (i >= numRows - 8) {//-8: the limit it of the soil/dirt
           let rndNum = Math.random();
           if (rndNum < 0.2) {
             cell.classList.add("gold");
@@ -47,8 +48,13 @@ function createWorld() {
         // Small stone pile between trees
         else if ((i >= 10 && i <= 10) && (j >= 15 && j <= 17)) {
             cell.classList.add("stone");}
-          
-            
+            //cloud
+          if (i===4  && (j===7 || j===6 || j===5)){
+            cell.classList.add("cloud");
+          }
+          if (i===3  && (j===5 || j===3 || j===4)){
+            cell.classList.add("cloud");
+          }
           else {
             cell.classList.add("sky");
           }
@@ -75,3 +81,51 @@ const addCell = () => {
 };
 
 createWorld();
+//========================================================================//
+//Assigning the tools events
+
+const axe = document.querySelector(".axe");
+const pickaxe = document.querySelector(".pickaxe");
+const shovel = document.querySelector(".shovel");
+let inUseTool;
+
+// Function to change the cursor
+function changeCursor(cursorImagePath) {
+    document.body.style.cursor = ` url(${cursorImagePath}), auto `;
+}
+
+axe.addEventListener("click", () => {
+    if (inUseTool) {
+        inUseTool.classList.remove("inUse-Tool");
+    }
+    inUseTool = axe;
+    inUseTool.classList.add("inUse-Tool");
+    changeCursor('./Assets/axe.png'); 
+});
+
+pickaxe.addEventListener("click", () => {
+    if (inUseTool) {
+        inUseTool.classList.remove("inUse-Tool");
+    }
+    inUseTool = pickaxe;
+    inUseTool.classList.add("inUse-Tool");
+    changeCursor('./Assets/Untitled design (25).png'); 
+});
+
+shovel.addEventListener("click", () => {
+    if (inUseTool) {
+        inUseTool.classList.remove("inUse-Tool");
+    }
+    inUseTool = shovel;
+    inUseTool.classList.add("inUse-Tool");
+    changeCursor('./Assets/shovel.png'); 
+});
+
+//  axe - default tool
+axe.click();
+//========================================================================//
+
+
+
+
+

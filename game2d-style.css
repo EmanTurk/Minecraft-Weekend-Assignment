@@ -1,214 +1,241 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: black;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .game-whole-container {
-    height: 90%;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    padding: 1rem;
-    background-color: rgb(0, 0, 0);
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 1rem;
+  background-color: rgb(0, 0, 0);
 }
 .main-world {
-    width: 100%; 
-    height: 100%;    
-
-
+  width: 100%;
+  height: 100%;
 }
 
-.cell-contaniner{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-height: 100%;    
+.cell-contaniner {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
 }
 
 .tools-bar {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 15%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
 }
 
-.tool{
-    width: 110px;
-    height: 110px;
-    padding: 20px 10px;
-    cursor: pointer;
-    align-self: center;
-    justify-content: center;
+.tool {
+  width: 110px;
+  height: 110px;
+  padding: 20px 10px;
+  cursor: pointer;
+  align-self: center;
+  justify-content: center;
+}
+.pickaxe {
+  background: url(./Assets/Untitled\ design\ \(25\).png) no-repeat center
+    center/cover;
+}
+.axe {
+  background: url(./Assets/axe.png) no-repeat center center/cover;
+}
+.shovel {
+  background: url(./Assets/shovel.png) no-repeat center center/cover;
+}
+.box {
+  background: url(./Assets/chestbox.gif) no-repeat center center/cover;
+}
 
-
+.row {
+  width: 100%;
+  display: flex;
 }
-.pickaxe{
-    background: url(./Assets/Untitled\ design\ \(25\).png) no-repeat center center/cover;
+.cell {
+  width: 30px;
+  height: 30px;
 }
-.axe{
-    background: url(./Assets/axe.png) no-repeat center center/cover;
-}
-.shovel{
-    background: url(./Assets/shovel.png) no-repeat center center/cover;
-}
-.box{
-    background: url(./Assets/chestbox.gif) no-repeat center center/cover;
-}
-.row{
-    width: 100%;
-    display: flex;
-   
-
-
-  
-}
-.cell{
-    width: 30px;
-    height: 30px;
-
-}
-.cell:hover{
-    border: 1px #fff solid;
+.cell:hover {
+  border: 1px #fff solid;
 }
 
 .sky {
-    background-color: rgb(78, 179, 219);
+  background-color: rgb(78, 179, 219);
+}
+.cloud {
+  background-color: rgb(255, 255, 255);
 }
 
-
-
 .wood {
-    background: url(./Assets/treebark.jpeg) no-repeat center center/cover;}
+  background: url(./Assets/treebark.jpeg) no-repeat center center/cover;
+}
 
 .gold {
-    background: url(./Assets/gold.jpeg) no-repeat center center/cover;
+  background: url(./Assets/gold.jpeg) no-repeat center center/cover;
 }
 
 .diamond {
-    background: url(./Assets/diamond.jpeg) no-repeat center center/cover;
+  background: url(./Assets/diamond.jpeg) no-repeat center center/cover;
 }
 
 .leaves {
-    background: url(./Assets/treeleaf.jpeg) no-repeat center center/cover;
+  background: url(./Assets/treeleaf.jpeg) no-repeat center center/cover;
 }
 
 .stone {
-    background: url(./Assets/stone03.jpeg) no-repeat center center/cover;}
+  background: url(./Assets/stone03.jpeg) no-repeat center center/cover;
+}
 
 .grass {
-    background: url(./Assets/grass-soil.jpeg) no-repeat center center/cover;}
+  background: url(./Assets/grass-soil.jpeg) no-repeat center center/cover;
+}
 .dirt {
-    background: url(./Assets/soil02.jpeg) no-repeat center center/cover;}
+  background: url(./Assets/soil02.jpeg) no-repeat center center/cover;
+}
 .flower-leaves {
-    background: url(./Assets/leaves-flower.jpeg) no-repeat center center/cover;}
+  background: url(./Assets/leaves-flower.jpeg) no-repeat center center/cover;
+}
 
- .reset-btn{
-        display: flex;
-        color: #fff;
-        width: 150px;
-        justify-content: center;
-        height: 60px;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        position: relative;
-        z-index: 0;
-        border-radius: 10px;
-        font-family: Minecraft;
-        display: inline-block;
-        margin-top: 30px;
-        font-size: 18px;
+.reset-btn {
+  display: flex;
+  color: #fff;
+  width: 150px;
+  justify-content: center;
+  height: 60px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-family: Minecraft;
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 18px;
+}
 
+.reset-btn:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+@keyframes glows {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 
- }
+.reset-btn:active {
+  color: #ffffff;
+}
 
-  .reset-btn:before {
-    content: "";
-    background: linear-gradient(
-      45deg,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00,
-      #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
+.reset-btn:active:after {
+  background: transparent;
+}
+
+.reset-btn:hover:before {
+  opacity: 1;
+}
+
+.reset-btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glows {
+  0% {
+    background-position: 0 0;
   }
-  @keyframes glows {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
+  50% {
+    background-position: 400% 0;
   }
-  
-  .reset-btn:active {
-    color: #ffffff;
+  100% {
+    background-position: 0 0;
   }
-  
-  .reset-btn:active:after {
-    background: transparent;
+}
+/* Active animation here */
+.inUse-Tool {
+  box-sizing: border-box;
+  border-radius: 20px;
+  position: relative;
+  animation: pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(51, 147, 16, 0.7),
+      0 0 10px rgba(179, 255, 151, 0.7), 0 0 15px rgba(179, 255, 151, 0.7);
   }
-  
-  .reset-btn:hover:before {
-    opacity: 1;
+  50% {
+    box-shadow: 0 0 10px rgba(106, 190, 76, 0.5),
+      0 0 20px rgba(179, 255, 151, 0.5), 0 0 30px rgba(179, 255, 151, 0.5);
   }
-  
-  .reset-btn:after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+  100% {
+    box-shadow: 0 0 5px rgba(179, 255, 151, 0.7),
+      0 0 10px rgba(179, 255, 151, 0.7), 0 0 15px rgba(179, 255, 151, 0.7);
+  }
+}
+.tile-window {
+    cursor: pointer;
+    width: 9rem;
+    height: 9rem;
+   
+    position: relative;
   }
   
-  @keyframes glows {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
-  }
-  
+ 
+
