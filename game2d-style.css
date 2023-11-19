@@ -13,31 +13,62 @@ body {
     align-items: center;
 }
 
+
 .game-whole-container {
     height: 90%;
+    width: 90%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 90%;
+    align-items: stretch;
     padding: 1rem;
-    background-color: rgb(48, 47, 47);
+    background-color: rgb(0, 0, 0);
+}
+.main-world {
+    width: 100%; 
+}
+
+.cell-contaniner{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .tools-bar {
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 20%;
-    height: 140%;
+    /* height: 100%;
     position: relative;
     padding-left: 2rem;
     left: -41%;
-    z-index: 50;
+    z-index: 50; */
 }
 
+.tool{
+    width: 110px;
+    height: 110px;
+    padding: 20px 10px;
+    cursor: pointer;
+    align-self: center;
+    justify-content: center;
+
+
+}
+.pickaxe{
+    background: url(./Assets/Untitled\ design\ \(25\).png) no-repeat center center/cover;
+}
+.axe{
+    background: url(./Assets/axe.png) no-repeat center center/cover;
+}
+.shovel{
+    background: url(./Assets/shovel.png) no-repeat center center/cover;
+}
+.box{
+    background: url(./Assets/chestbox.gif) no-repeat center center/cover;
+}
 .row{
     width: 100%;
     display: flex;
@@ -75,10 +106,7 @@ body {
 
 .grass {
     background: url(./Assets/grass-soil.jpeg) no-repeat center center/cover;}
-.soil {
+.dirt {
     background: url(./Assets/soil02.jpeg) no-repeat center center/cover;}
 
-    .random-material {
-        background-color: rgb(196, 27, 27); 
-    }
-    
+ 
